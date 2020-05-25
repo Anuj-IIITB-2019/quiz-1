@@ -1,0 +1,129 @@
+<!-- addAnswer.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>answer list</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+   <form method="GET" name="my_answerlist_form">
+        <div class="form-group">
+          <p class="col-sm-12" id ="question" for="question">Question:</p>
+        </div>
+        <div>Multiple choice:<br>
+        <label class="radio-inline"><input type="radio" name="mcqornot" value="Yes" checked>Yes</label>
+        <label class="radio-inline"><input type="radio" name="mcqornot" value="No">No</label>
+        </div>
+        <!-- <button type="button" onclick="displayRadioValue()"> 
+        Submit 
+       </button> --> 
+        <div id="result">
+        	 <table id="answerlisttable">
+          <thead>
+            <tr>
+              <th id="questionHead">Question</th>
+              <th id="mcqHead">mcq</th>
+              <th id="displayChoicesOrNull">displayChoicesornull</th>
+              <th id="answer[selected]Head">answer[selected]</th>
+              <th id="answer[actual]Head">answer[actual]</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="question">Some random question from database of a given test</td>
+              <td id="mcq">true or false</td>
+              <td id="answerMade">
+                <!-- if mcq is set to true display list else display nothing -->
+                  <div id ="optionslist">
+                    <ul>
+                  <li id="option1">option1</li>
+                  <li id="option2">option2</li>
+                  <li id="option3">option3</li>
+                  <li id="option4">option4</li>
+                    </ul>
+                  </div>
+            </td>
+              <td id="answer[actual]">correct answer to the question</td> 
+              <td id="answer[selected]">student selected answer</td>
+            </tr>
+          </tbody>
+        </table>
+        </div> 
+        <!-- <div id ="optionslist">
+          <div class="form-group">
+          <label class="control-label col-sm-2" for="option1">option1:</label>
+            <div class="col-sm-8">
+              <input class ="form-control "  type="text" name="option1" id="option1">
+            </div>
+          </div>
+
+          <div class="form-group">
+          <label class="control-label col-sm-2" for="option2">option2:</label>
+            <div class="col-sm-8">
+              <input class ="form-control "  type="text" name="option2" id="option2">
+            </div>
+          </div>
+
+          <div class="form-group">
+          <label class="control-label col-sm-2" for="option3">option3:</label>
+            <div class="col-sm-8">
+              <input class ="form-control "  type="text" name="option3" id="option3">
+            </div>
+          </div>
+
+          <div class="form-group">
+          <label class="control-label col-sm-2" for="option4">option4:</label>
+            <div class="col-sm-8">
+              <input class ="form-control "  type="text" name="option4" id="option4">
+            </div>
+          </div> -->
+        <!--  <div> Answer:<br>
+<label class="radio-inline"><li type="radio" name="optionslist" id="option1">option1</label>
+<label class="radio-inline"><li type="radio" name="optionslist" id="option2">option2</label>
+<label class="radio-inline"><li type="radio" name="optionslist" id="option3">option3</label>
+<label class="radio-inline"><li type="radio" name="optionslist" id="option4">option4</label>
+        </div> -->
+
+        </div>
+
+
+       <!--  <div class="form-group">
+        <label class="control-label col-sm-2" for="answer">answer:</label>
+        <div class="col-sm-8">
+          <input class ="form-control "  type="Select" name="answer" id="answer">
+      	</div>
+        </div>
+
+        <div class="form-group">
+        <label class="control-label col-sm-2" id="selected_answer">selected:</label>
+        <div class="col-sm-4">
+        </div>
+
+
+        <div class="form-group">
+        <label class="control-label col-sm-2" id="actual_answer">actual:</label>
+        <div class="col-sm-4">
+    	</div>
+        </div>
+
+
+        <div class="col-sm-4"><input class ="form-control " value="Submit Question" type="button" 
+        onclick="submit_answerlist_form()">
+
+        <div class="col-sm-4"><input class ="form-control "  value="Make Test" type="button" 
+        onclick="make_test()"> -->
+    </form>
+
+    
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/answerlist.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
