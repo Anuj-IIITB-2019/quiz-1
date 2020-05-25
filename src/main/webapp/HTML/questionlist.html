@@ -1,0 +1,112 @@
+<!-- addQuestion.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>question list</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+ <!--  <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script> -->
+</head>
+<body>
+    <form class= "form" method="POST" name="my_questionlist_form">
+        <div class="form-group">
+          <textarea class="col-sm-12" for="question">Question:</textarea>
+        </div>
+        <div>Multiple choice:<br>
+        <label class="radio-inline"><!-- <p type="radio" name="mcqornot" value="true"></p> -->true
+        </label>
+        <label class="radio-inline"><!-- <p type="radio" name="mcqornot" value="false"></p> -->
+        false</label>
+        </div>
+        <!-- <button type="button" 
+       onclick="displayRadioValue()"
+        > 
+        Submit 
+       </button> --> 
+        <div id="result"></div> 
+        
+          <table id="questionlisttable">
+          <thead>
+            <tr>
+              <th id="questionHead">Question</th>
+              <th id="mcqHead">mcq</th>
+              <th id="displayChoicesOrNull">displayChoicesornull</th>
+              <th id="answer">answer</th>
+              <th id="marksHead">marks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="question">Some random question from database of a given test</td>
+              <td id="mcq">true or false</td>
+              <td id="answerMade">
+                <!-- if mcq is set to true display list else display nothing -->
+                  <div id ="optionslist">
+                    <ul>
+                  <li id="option1">option1</li>
+                  <li id="option2">option2</li>
+                  <li id="option3">option3</li>
+                  <li id="option4">option4</li>
+                    </ul>
+                  </div>
+            </td>
+              <td id="answer">dynamically change to answer if mcq is false or get answer from db</td> 
+              <td id="marks">marks of the question</td>
+            </tr>
+          </tbody>
+        </table>
+          <!-- <div class="form-group col-sm-4">
+          <label class="control-label col-sm-2" for="option1">option1:</label>
+              <p class ="form-control "  type="text" name="option1" id="option1"></p>
+          </div>
+
+          <div class="form-group">
+          <label class="control-label col-sm-2" for="option2">option2:</label>
+            <div class="col-sm-10">
+              <p class ="form-control "  type="text" name="option2" id="option2"></p>
+            </div>
+          </div>
+
+          <div class="form-group">
+          <label class="control-label col-sm-2" for="option3">option3:</label>
+            <div class="col-sm-10">
+              <p class ="form-control "  type="text" name="option3" id="option3"></p>
+            </div>
+          </div>
+
+          <div class="form-group">
+          <label class="control-label col-sm-2" for="option4">option4:</label>
+            <div class="col-sm-10">
+              <p class ="form-control "  type="text" name="option4" id="option4"></p>
+            </div>
+          </div> -->
+
+        </div>
+
+
+        <div class="form-group">
+        <label class="control-label col-sm-2" for="answer">answer:</label>
+        <div class="col-sm-10">
+          <p class ="form-control "  type="Select" name="answer" id="answer"></p></div>
+        </div>
+
+        <div class="form-group">
+        <label class="control-label col-sm-2" for="marks">marks:</label>
+        <div class="col-sm-10">
+        <p class ="form-control "  type="text" name="marks" id="marks"><p></div>
+        </div>
+
+
+        <!-- <div class="col-sm-10"><input class ="form-control "  value="Submit" type="button" >
+        </div> -->
+    </form>
+    
+    <!-- <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/questionlist.js"></script>
+    <script src="js/main.js"></script> -->
+</body>
+</html>
